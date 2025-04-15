@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch all users
     async function fetchUsers() {
       try {
-        const response = await fetch('http://localhost:3001/api/users');
+        const response = await fetch('http://localhost:3009/api/users');
         const users = await response.json();
         displayUsers(users);
       } catch (error) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch single user
     async function fetchUser(id) {
       try {
-        const response = await fetch(`http://localhost:3001/api/users/${id}`);
+        const response = await fetch(`http://localhost:3009/api/users/${id}`);
         const user = await response.json();
         displayUserDetails(user);
       } catch (error) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Search users
     async function searchUsers(query) {
       try {
-        const response = await fetch(`http://localhost:3001/api/users`);
+        const response = await fetch(`http://localhost:3009/api/users`);
         const users = await response.json();
         
         const results = users.filter(user => 
